@@ -8,7 +8,7 @@ struct Node {
   std::string identify;
   int replicas;
   Node() : identify(), replicas(0) { }
-  Node(const std::string& iden, int re) : identify(iden), replicas(re) { }
+  Node(const std::string& s, int i) : identify(s), replicas(i) { }
 };
 
 class ConHash {
@@ -20,9 +20,9 @@ class ConHash {
   bool Lookup(const std::string& object, Node* node);
 
  private:
-  int Hash(const std::string& identify, int i);
+  size_t Hash(const std::string& identify, int i);
 
-  std::map<int, Node> vnodes_;
+  std::map<size_t, Node> vnodes_;
 
   // No copying allowed
   ConHash(const ConHash&);
