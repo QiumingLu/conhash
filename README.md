@@ -1,0 +1,2 @@
+# conhash
+Consistent hashing
