@@ -1,13 +1,12 @@
 CXXFLAGS= -I. 
 CXXFLAGS+=-g
 CXXFLAGS+=-O2 
-CXXFLAGS+=-std=c++11
-CXXFLAGS+=-Werror -Wno-sign-conversion -Wconversion -Wall \
+CXXFLAGS+=-Wall \
 		  -Wno-unused-parameter -Woverloaded-virtual -Wextra \
 		  -Wpointer-arith -Wshadow
 
 TESTS=sample
-OBJS=conhash.o 
+OBJS=conhash.o murmurhash3.o
 LIB=libconhash.a
 
 all: $(TESTS) $(LIB)
@@ -23,7 +22,7 @@ $(LIB) : $(OBJS)
 tags :
 	ctags -R *
 
-sample: sample.cc conhash.cc 
+sample: sample.cc conhash.cc murmurhash3.cc
 
 .PHONY: clean
 clean:

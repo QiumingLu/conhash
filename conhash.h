@@ -20,9 +20,9 @@ class ConHash {
   bool Lookup(const std::string& object, Node* node);
 
  private:
-  size_t Hash(const std::string& identify, int i);
+  uint32_t Hash(const std::string& identify, int i);
 
-  std::map<size_t, Node> vnodes_;
+  std::map<uint32_t, Node> vnodes_;
 
   // No copying allowed
   ConHash(const ConHash&);
