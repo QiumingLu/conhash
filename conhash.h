@@ -1,10 +1,12 @@
 #ifndef CONHASH_H_
 #define CONHASH_H_
 
+#include <stdint.h>
 #include <map>
 #include <string>
 
-struct Node {
+class Node {
+ public:
   std::string identify;
   int replicas;
   Node() : identify(), replicas(0) { }

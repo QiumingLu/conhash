@@ -25,6 +25,7 @@ bool ConHash::Lookup(const std::string& object, Node* node) {
   if (vnodes_.empty()) {
     return false;
   }
+  
   uint32_t key;
   MurmurHash3_x86_32(object.c_str(), static_cast<int>(object.size()), 0, &key);
 
