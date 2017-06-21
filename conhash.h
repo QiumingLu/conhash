@@ -13,8 +13,8 @@ class Node {
  public:
   std::string identify;
   int replicas;
-  Node() : identify(), replicas(0) { }
-  Node(const std::string& s, int i) : identify(s), replicas(i) { }
+  Node() : identify(), replicas(0) {}
+  Node(const std::string& s, int i) : identify(s), replicas(i) {}
 };
 
 class ConHash {
